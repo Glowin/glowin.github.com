@@ -1,0 +1,8 @@
+---
+layout: post
+title: "分享一个不错的电子书分享网站&#8212;&#8212;皮皮书屋"
+date: 2011-01-03 14:41
+comments: true
+categories: 
+---
+<p>也许你是一名编程开发或者网页前端开发人员，手上有一本不错的教程是必不可少的。但是限于国内拙劣的教程书籍，比如说，《××从入门到精通》、《21天学会××》，还有不少翻译过来漏洞百出的书，没学到知识还不要紧，还把我们学习的热情给打消了。于是就有大侠给小白们建议：尽量看看英语的原版书籍吧，这样不仅能了解书作者的真实想法，而且获得的信息也比较前端。于是乎，这篇博文主要是介绍一个专门面对程序员的英文原版书籍的分享网站——皮皮书屋（<a href="http://www.ppurl.com/">http://www.ppurl.com/</a>）。</p>  <p>和大多数网站一样，大家要是想从这个网站上下载电子书的话，必须得注册。一说到注册，大家可能很厌烦，折腾半天时间只为了几本电子书，还得给你我的个人信息，太不值得了。但是，这个网站的注册验证码很奇特，而且把自己和其他的网站给区分开来。<!--more-->看图：<a href="http://www.ppurl.com/"><img style="border-bottom: 0px; border-left: 0px; display: block; float: none; margin-left: auto; border-top: 0px; margin-right: auto; border-right: 0px" title="皮皮书屋" border="0" alt="皮皮书屋" src="/static/images/2011/01/ef1769c39af4.jpg" width="620" height="455" /></a> </p>  <p>这张图片大家有没有种亲切的感觉。反正我第一次注册的时候算了半天没有算出答案，然后又弄到VC中运行了一下也没有得到真确答案。只好刷新了几下，碰到了一个熟悉的javascript才过关。</p>  <p>这个网站不仅验证码很新颖，而且有很丰富的电子书（当然是英文原版）。比如，我对刚出来的HTML5 感兴趣，于是网上的一个大牛推荐我读<a href="http://www.amazon.com/Pro-HTML5-Programming-Application-Development/dp/1430227907/ref=sr_1_1?ie=UTF8&amp;s=books&amp;qid=1294036004&amp;sr=1-1" target="_blank">《Pro HTML 5 Programming》</a>。到google上搜索的都是些外国网站的下载链接，下载速度非常慢，而且verycd上没人发布资源。到<a href="http://www.ppurl.com/" target="_blank">皮皮书屋</a>一下子就搜索到了，而且有很多最新的相关的书籍提供下载，相当方便。</p>  <p>PS：给大家提供一个小技巧，破解<a href="http://www.ppurl.com/" target="_blank">皮皮书屋</a>一天只能下载10本书。相信大家在看完我介绍后会迫不及待的去下载书籍了。但是一时心血来潮下了很多书，一下子就超过了默认的每天最大的下载数量。怎么办，不可能说等到明天再下载吧，您会说：换代理、重新申请账号呢？其实没这么麻烦。只要我们清除一下浏览器的cookie就可以了。原因是它把用户的下载记录在用户本地浏览器的cookie中，超过了限制就会提醒。（什么，你问我怎样清除cookie？google一下吧）</p>  <p>嗯，最后祝大家元旦节快乐~</p>
