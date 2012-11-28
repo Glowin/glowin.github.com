@@ -6,7 +6,7 @@ url: http://Glowin.github.com
 title: Glow Blog
 subtitle: This is glow blog.
 author: Glowin
-simple_search: http://google.com/search
+simple_search: https://google.com/search
 description:
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
@@ -27,7 +27,7 @@ email:
 
 # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
 root: /
-permalink: /blog/:year/:month/:day/:title/
+permalink: /blog/:year/:month/:title/
 source: source
 destination: public
 plugins: plugins
@@ -89,7 +89,7 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
+disqus_short_name: glowin
 disqus_show_comment_count: false
 
 # Google Analytics
