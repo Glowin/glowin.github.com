@@ -110,6 +110,7 @@ task :new_post, :title do |t, args|
     post.puts "categories: "
     post.puts "---"
   end
+  %x("C:\\Program Files\\Sublime Text 2\\sublime_text.exe" #{filename})
 end
 
 # usage rake new_page[my-new-page] or rake new_page[my-new-page.html] or rake new_page (defaults to "new-page.markdown")
