@@ -7,7 +7,7 @@ title: Glow Blog
 subtitle: This is glow blog.
 author: Glowin
 simple_search: https://google.com/search
-description:
+description: 
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -64,7 +64,7 @@ github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user: glowin
+twitter_user: glow1n
 twitter_tweet_count: 4
 twitter_show_replies: false
 twitter_follow_button: true
