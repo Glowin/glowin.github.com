@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "选择的试题在数据库上不可用，解决方案"
+title: "选择的试题在数据库上不可用的解决方案"
 date: 2012-09-22 22:03
 comments: true
 categories: 
