@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Flag for Chrome修复更新PageRank - Glow Blog</title>
+  <meta name="author" content="Glowin">
+
+  
+  <meta name="description" content="Flag for Chrome 是一款 chrome 上的插件，它能显示被访问网站服务器所在国家和地区、Geo、Google PageRank,、Alexa Rank和WOT等信息。功能和 firefox 上的 flagfox 还要强大。我就经常用它来看网站的所在国家和 PageRank。 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://Glowin.github.com/2012/02/flag-for-chrome-repairepagerank/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Glow Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Glow Blog</a></h1>
+  
+    <h2>This is glow blog.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:Glowin.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Flag for Chrome修复更新PageRank</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-21T16:31:00+08:00" pubdate data-updated="true">Feb 21<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Flag for Chrome 是一款 chrome 上的插件，它能显示被访问网站服务器所在国家和地区、Geo、Google PageRank,、Alexa Rank和WOT等信息。功能和 firefox 上的 flagfox 还要强大。我就经常用它来看网站的所在国家和 PageRank。<a href="https://chrome.google.com/webstore/detail/dbpojpfdiliekbbiplijcphappgcgjfn" target="_blank">插件下载地址</a></p>
+
+<p>在近段时间的使用中，以前 chrome 地址栏上 Flag for Chrome 显示的 PageRank 值显示为问号。经过一番检查，原来是 google 的 PageRank 已经停止使用，但是 PageRank 的 API 还没有撤销，只不过 google 把它更改了一下，加上插件作者好长段时间没有更新了，所以原本显示 PageRank 的地方成了问号。现在给大家介绍如何修复 PageRank 的显示问题。</p>
+
+<ol>
+    <li><strong>找到插件的文件位置。</strong>一般来说，chrome插件的文件位置就是在它的安装目录里面。比如我的“C:\Users\<strong>用户名</strong>\AppData\Local\Google\Chrome\User Data\Default\Extensions\dbpojpfdiliekbbiplijcphappgcgjfn\0.4.1_0”，其中dbpojpfdiliekbbiplijcphappgcgjfn为 Flag for Chrome 在应用市场的 ID，“0.4.1_0”是插件的版本号。<strong>注意</strong>：AppData 文件夹为默认隐藏，需要修改文件夹选项将其显示。</li>
+    <li><strong>修改 js 文件夹中的 PageRank.js 文件。</strong>替换“http://toolbarqueries.google.com/search?client=navclient-auto&amp;hl=en&amp;ch=”字段为“http://toolbarqueries.google.com/tbr?client=navclient-auto&amp;features=Rank&amp;ch=”。</li>
+    <li><strong>重启 Chrome 浏览器。</strong></li>
+</ol>
+
+
+<div>大功告成，现在 PageRank 又回到我的地址栏了。在最后，恳请此插件的作者早日更新这个 bug。</div>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Glowin</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-21T16:31:00+08:00" pubdate data-updated="true">Feb 21<span>st</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://Glowin.github.com/2012/02/flag-for-chrome-repairepagerank/" data-via="glow1n" data-counturl="http://Glowin.github.com/2012/02/flag-for-chrome-repairepagerank/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2011/11/tcexam-transform-csv-to-xml/" title="Previous Post: tcexam在线考试系统csv文件转换为xml文件">&laquo; tcexam在线考试系统csv文件转换为xml文件</a>
+      
+      
+        <a class="basic-alignment right" href="/2012/07/hello-world/" title="Next Post: hello world">hello world &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2013/02/hacker-news-full-content-rss/">Hacker News的全文输出RSS地址</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/09/the-selected-questions-are-not-available-in-the-database/">选择的试题在数据库上不可用的解决方案</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/07/hello-world/">hello world</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/02/flag-for-chrome-repairepagerank/">Flag for Chrome修复更新PageRank</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/11/tcexam-transform-csv-to-xml/">tcexam在线考试系统csv文件转换为xml文件</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/Glowin">@Glowin</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'Glowin',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("glow1n", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/glow1n" class="twitter-follow-button" data-show-count="false">Follow @glow1n</a>
+  
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/117778352719386861792?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Glowin -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'glowin';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://Glowin.github.com/2012/02/flag-for-chrome-repairepagerank/';
+        var disqus_url = 'http://Glowin.github.com/2012/02/flag-for-chrome-repairepagerank/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

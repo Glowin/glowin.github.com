@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>tcexam在线考试系统csv文件转换为xml文件 - Glow Blog</title>
+  <meta name="author" content="Glowin">
+
+  
+  <meta name="description" content="tcexam是一个非常优秀的在线考试系统，将纸笔考试转化为在计算机上在线完成，只要有计算机和网络就可以考试，大大简化了整个考试流程，将出题、考试、管理阅卷登常规过程一并纳入一个系统中，不仅减少了人力，而且极大的提高了整个效率和考试结果的可信度。Glow认为最大的收益方为组织考试的老师， &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://Glowin.github.com/2011/11/tcexam-transform-csv-to-xml/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Glow Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Glow Blog</a></h1>
+  
+    <h2>This is glow blog.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:Glowin.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Tcexam在线考试系统csv文件转换为xml文件</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-19T21:09:00+08:00" pubdate data-updated="true">Nov 19<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><span class="Apple-style-span" style="color: #333333; font-weight: 300;">tcexam是一个非常优秀的在线考试系统，将纸笔考试转化为在计算机上在线完成，只要有计算机和网络就可以考试，大大简化了整个考试流程，将出题、考试、管理阅卷登常规过程一并纳入一个系统中，不仅减少了人力，而且极大的提高了整个效率和考试结果的可信度。Glow认为最大的收益方为组织考试的老师，它让老师免去了试卷排版和编排的工作，将更多的时间放在了出题的质量上，而且只需要提交 csv 格式或者 xml 格式的考试试题设置相关考试要求，其他的工作比如判卷就可以交与服务器完成，特别是当题目大多数为选择题时效果最明显。（TCExam的主页和下载页面为</span><a style="font-weight: 300;" href="http://www.tcexam.org/" target="_blank">这个</a><span class="Apple-style-span" style="color: #333333; font-weight: 300;">）</span></p>
+
+<h1> 为什么要把 csv 转换成 xml</h1>
+
+
+<p>TCExam 考试系统默认只能导入xml格式的考试试题，但是我们老师给的考试试题确实从Excel 转换后的 csv 格式。只有通过修改考试系统的源代码来让TCExam考试系统支持csv 格式的试题导入。这里 Glow 采用曲线救国的方法，将 csv 格式的试题先转换成xml，然后由老师手动导入到考试系统。下面是老师提供的 csv 格式的部分试题。<!--more--></p>
+
+<pre>CSVInsert,标题(1),类型(2),解答(3),答案(4),分值(5),答错扣分(可选项)(6),分级level(7),Tag(8),留空列(9),留空列(10),选项A(11),选项B(12),选项C(13)…,选项D(14),选项E(15)
+1,车床的种类很多，其中应用最广的是(  )。,1,,12,,,1,,,,立式车床,卧式车床,仪表车床,转塔车床,
+2,目前最常用的车刀材料是为（  ）。,1,,12,,,2,,,,硬质合金和碳素钢,硬质合金和高速钢,碳素钢和高速钢,硬质合金和45号钢,
+
+60,车削加工的切削用量三要素有（  ）。,2,,11，12，13,,,2,,,,切削速度,切削深度     ,进给量,切削宽度,切削厚度
+61,在金属切削加工过程中，工件上存在三个不断变化的表面有（  ）。,2,,11，12，14,,,2,,,,已加工表面 ,待加工表面　,端面,过渡表面,内孔
+
+103,车工是使用车床进行切削的工种。,3,,11,,,1,,,,是,,,,
+104,车工是使用车床的技术工人。,3,,11,,,1,,,,是,,,,</pre>
+
+
+<p>csv格式的文件主要是用逗号来分隔文件内容的格式。</p>
+
+<p>TCExam格式的xml文件如下</p>
+
+<div class="source" style="font-family: Consolas, 'Lucida Console', 'Courier New'; color: #000000; background-color: #f9f7ed;"><span style="color: #008080;">&lt;?xml version=&#8221;1.0&#8221; encoding=&#8221;UTF-8&#8221; ?&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;tcexamquestions</span> <span style="color: #ff0000;">version=</span><span style="color: #0000ff;">&#8220;11.2.004&#8221;</span><span style="color: #000080; font-weight: bold;">&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;header</span> <span style="color: #ff0000;">lang=</span><span style="color: #0000ff;">&#8220;cn&#8221;</span> <span style="color: #ff0000;">date=</span><span style="color: #0000ff;">&#8220;2011-11-18 08:49:14&#8221;</span><span style="color: #000080; font-weight: bold;">&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;/header&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;body&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;module&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;name&gt;</span>车工机考试题<span style="color: #000080; font-weight: bold;">&lt;/name&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;enabled&gt;</span>true<span style="color: #000080; font-weight: bold;">&lt;/enabled&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;subject&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;name&gt;</span>单选题<span style="color: #000080; font-weight: bold;">&lt;/name&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;description&gt;</span>单选题<span style="color: #000080; font-weight: bold;">&lt;/description&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;enabled&gt;</span>true<span style="color: #000080; font-weight: bold;">&lt;/enabled&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;question&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;enabled&gt;</span>true<span style="color: #000080; font-weight: bold;">&lt;/enabled&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;type&gt;</span>single<span style="color: #000080; font-weight: bold;">&lt;/type&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;difficulty&gt;</span>1<span style="color: #000080; font-weight: bold;">&lt;/difficulty&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;position&gt;&lt;/position&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;timer&gt;</span>0<span style="color: #000080; font-weight: bold;">&lt;/timer&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;fullscreen&gt;</span>false<span style="color: #000080; font-weight: bold;">&lt;/fullscreen&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;inline_answers&gt;</span>false<span style="color: #000080; font-weight: bold;">&lt;/inline_answers&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;auto_next&gt;</span>false<span style="color: #000080; font-weight: bold;">&lt;/auto_next&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;description&gt;</span>车床的种类很多，其中应用最广的是(  )。<span style="color: #000080; font-weight: bold;">&lt;/description&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;explanation&gt;&lt;/explanation&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;answer&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;enabled&gt;</span>true<span style="color: #000080; font-weight: bold;">&lt;/enabled&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;isright&gt;</span>false<span style="color: #000080; font-weight: bold;">&lt;/isright&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;position&gt;&lt;/position&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;keyboard_key&gt;&lt;/keyboard_key&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;description&gt;</span>立式车床<span style="color: #000080; font-weight: bold;">&lt;/description&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;explanation&gt;&lt;/explanation&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;/answer&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;/question&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;/subject&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;/module&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;/body&gt;</span>
+<span style="color: #000080; font-weight: bold;">&lt;/tcexamquestions&gt;</span></div>
+
+
+<p>在分析 csv 和 TCExam考试系统的代码后，转换的 php 代码的思路也越来越明晰。首先我们先读取 csv 文件，然后逐行读取它，使用 php 的 explode 函数，将每行文字用英文逗号分隔，输出为数组方便后面的调用。最后输出 TCExam 标准的 xml 文件提供下载。</p>
+
+<h1> 如何给 TCExam 添加 csv 转换成 xml 的功能</h1>
+
+
+<p>1、在 admin/code/tce_import_xml_questions.php 文件的 97 行左右添加如下的代码，主要是给考试系统添加上传 csv 格式的文件，以及添加考试试题的名称。（复制代码时请把下面中出现的中文引号全部改为英文引号，否则就会报语法错误；另外把tce_import_xml_question.php的编码改成UTF-8无BOM编码）</p>
+
+<div class="source" style="font-family: Consolas, 'Lucida Console', 'Courier New'; color: #000000; background-color: #f9f7ed;"><span style="color: #000080; font-weight: bold;">echo</span> <span style="color: #0000ff;">&#8216;&lt;div class=&#8221;tceformbox&#8221;&gt;&#8217;</span><span style="color: #000000;">.</span><span style="color: #000000;">K_NEWLINE</span>;
+<span style="color: #000080; font-weight: bold;">echo</span> <span style="color: #0000ff;">&#8216;&lt;h1&gt;csv转换为xml&lt;/h1&gt;&#8217;</span><span style="color: #000000;">.</span><span style="color: #000000;">K_NEWLINE</span>;
+<span style="color: #000080; font-weight: bold;">echo</span> <span style="color: #0000ff;">&#8216;&lt;form action=&#8221;transf.php&#8221; method=&#8221;post&#8221; enctype=&#8221;multipart/form-data&#8221; id=&#8221;form_ratingeditor&#8221;&gt;&#8217;</span><span style="color: #000000;">.</span><span style="color: #000000;">K_NEWLINE</span>;
+<span style="color: #000080; font-weight: bold;">echo</span> <span style="color: #0000ff;">&#8216;&lt;div class=&#8221;row&#8221;&gt;&#8217;</span><span style="color: #000000;">.</span><span style="color: #000000;">K_NEWLINE</span>;
+<span style="color: #000080; font-weight: bold;">echo</span> <span style="color: #0000ff;">&#8216;&lt;span class=&#8221;label&#8221;&gt;&#8217;</span><span style="color: #000000;">.</span><span style="color: #000000;">K_NEWLINE</span>;
+<span style="color: #000080; font-weight: bold;">echo</span> <span style="color: #0000ff;">&#8216;&lt;label for=&#8221;file&#8221;&gt;csv文件:&lt;/label&gt;&#8217;</span><span style="color: #000000;">.</span><span style="color: #000000;">K_NEWLINE</span>;
+<span style="color: #000080; font-weight: bold;">echo</span> <span style="color: #0000ff;">&#8216;&lt;/span&gt;&#8217;</span><span style="color: #000000;">.</span><span style="color: #000000;">K_NEWLINE</span>;
+<span style="color: #000080; font-weight: bold;">echo</span> <span style="color: #0000ff;">&#8216;&lt;span class=&#8221;formw&#8221;&gt;&#8217;</span><span style="color: #000000;">.</span><span style="color: #000000;">K_NEWLINE</span>;
+<span style="color: #000080; font-weight: bold;">echo</span> <span style="color: #0000ff;">&#8216;&lt;input type=&#8221;file&#8221; name=&#8221;file&#8221; id=&#8221;file&#8221; /&gt;&lt;br /&gt;&#8217;</span><span style="color: #000000;">.</span><span style="color: #000000;">K_NEWLINE</span>;
+<span style="color: #000080; font-weight: bold;">echo</span> <span style="color: #0000ff;">&#8216;&lt;/span&gt;&#8217;</span><span style="color: #000000;">.</span><span style="color: #000000;">K_NEWLINE</span>;
+<span style="color: #000080; font-weight: bold;">echo</span> <span style="color: #0000ff;">&#8216;&lt;/div&gt;&#8217;</span><span style="color: #000000;">.</span><span style="color: #000000;">K_NEWLINE</span>;
+<span style="color: #000080; font-weight: bold;">echo</span> <span style="color: #0000ff;">&#8216;&lt;div class=&#8221;row&#8221;&gt;&#8217;</span><span style="color: #000000;">.</span><span style="color: #000000;">K_NEWLINE</span>;
+<span style="color: #000080; font-weight: bold;">echo</span> <span style="color: #0000ff;">&#8216;&lt;span class=&#8221;label&#8221;&gt;&#8217;</span><span style="color: #000000;">.</span><span style="color: #000000;">K_NEWLINE</span>;
+<span style="color: #000080; font-weight: bold;">echo</span> <span style="color: #0000ff;">&#8216;&lt;label for=&#8221;module_name&#8221;&gt;试题名称:&lt;/label&gt;&#8217;</span><span style="color: #000000;">.</span><span style="color: #000000;">K_NEWLINE</span>;
+<span style="color: #000080; font-weight: bold;">echo</span> <span style="color: #0000ff;">&#8216;&lt;/span&gt;&#8217;</span><span style="color: #000000;">.</span><span style="color: #000000;">K_NEWLINE</span>;
+<span style="color: #000080; font-weight: bold;">echo</span> <span style="color: #0000ff;">&#8216;&lt;span class=&#8221;formw&#8221;&gt;&#8217;</span><span style="color: #000000;">.</span><span style="color: #000000;">K_NEWLINE</span>;
+<span style="color: #000080; font-weight: bold;">echo</span> <span style="color: #0000ff;">&#8216;&lt;input type=&#8221;text&#8221; name=&#8221;module_name&#8221; id=&#8221;module_name&#8221; /&gt;&#8217;</span><span style="color: #000000;">.</span><span style="color: #000000;">K_NEWLINE</span>;
+<span style="color: #000000;">F_submit_button</span>(<span style="color: #0000ff;">&#8220;update&#8221;</span><span style="color: #000000;">,</span> <span style="color: #a61717; background-color: #e3d2d2;">上传</span><span style="color: #000000;">,</span> <span style="color: #a61717; background-color: #e3d2d2;">上传</span>);
+<span style="color: #000080; font-weight: bold;">echo</span> <span style="color: #0000ff;">&#8216;&lt;/span&gt;&#8217;</span><span style="color: #000000;">.</span><span style="color: #000000;">K_NEWLINE</span>;
+<span style="color: #000080; font-weight: bold;">echo</span> <span style="color: #0000ff;">&#8216;&lt;/div&gt;&#8217;</span><span style="color: #000000;">.</span><span style="color: #000000;">K_NEWLINE</span>;
+<span style="color: #000080; font-weight: bold;">echo</span> <span style="color: #0000ff;">&#8216;&lt;br /&gt;&#8217;</span><span style="color: #000000;">.</span><span style="color: #000000;">K_NEWLINE</span>;
+<span style="color: #000080; font-weight: bold;">echo</span> <span style="color: #0000ff;">&#8216;&lt;br /&gt;&#8217;</span><span style="color: #000000;">.</span><span style="color: #000000;">K_NEWLINE</span>;<span style="color: #000080; font-weight: bold;">echo</span> <span style="color: #0000ff;">&#8216;&lt;/form&gt;&#8217;</span><span style="color: #000000;">.</span><span style="color: #000000;">K_NEWLINE</span>;
+<span style="color: #000080; font-weight: bold;">echo</span> <span style="color: #0000ff;">&#8216;&lt;/div&gt;&lt;!&#8211; svc转换为xml结束 &#8211;&gt;&#8217;</span><span style="color: #000000;">.</span><span style="color: #000000;">K_NEWLINE</span>;</div>
+
+
+<div class="mceTemp" style="text-align: left;"><dl id="attachment_142150" class="wp-caption alignnone" style="width: 474px;"><dt class="wp-caption-dt"><a href="http://glowface.net/2011/11/tcexam-transform-csv-to-xml/tcexam-csv-xml/" rel="attachment wp-att-142150"><img class="size-full wp-image-142150" title="TCExam-csv-xml" src="/static/images/2011/11/TCExam-csv-xml.jpg" alt="" width="464" height="290" /></a></dt><dd class="wp-caption-dd">修改后的页面效果</dd></dl></div>
+
+
+<p>2、在 TCExam 考试系统的 admin/code 文件夹中添加 transf.php 文件，点击<a href="https://gist.github.com/1378794" target="_blank">这里</a>下载</p>
+
+<p>源代码如下：</p>
+
+<script src="https://gist.github.com/1378794.js?file=transf.php"></script>
+
+
+<p>3、修改上面的要求后，老师在后台的“模块”→“导入”中上传 csv 格式的试题，填写相关的考试试题名称后，点击提交后系统就会弹出下载的 xml 文件，老师可以直接把此 xml 文件导入到考试系统中。</p>
+
+<h1>题外话</h1>
+
+
+<p>如果您的 csv 格式的文件内容结构和我的不同的话，可以参考一下我的代码。主要思路就是逐行读取 csv 文件后，输出为TCExam考试系统能够读取的 xml 试题文件。如果你在实际操作中遇到问题，可以在 <a href="http://weibo.com/jiangbian66" target="_blank">新浪微博</a> 、 <a href="https://twitter.com/#!/glow1n" target="_blank">twitter</a> 、 <a href="https://plus.google.com/u/0/117778352719386861792/posts" target="_blank">Google+</a> 上联系我。</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Glowin</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-19T21:09:00+08:00" pubdate data-updated="true">Nov 19<span>th</span>, 2011</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://Glowin.github.com/2011/11/tcexam-transform-csv-to-xml/" data-via="glow1n" data-counturl="http://Glowin.github.com/2011/11/tcexam-transform-csv-to-xml/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2011/11/rucinaxian/" title="Previous Post: 2012哥伦比亚大学中国新年晚会留学生群口相声《如此纳贤》台词整理">&laquo; 2012哥伦比亚大学中国新年晚会留学生群口相声《如此纳贤》台词整理</a>
+      
+      
+        <a class="basic-alignment right" href="/2012/02/flag-for-chrome-repairepagerank/" title="Next Post: Flag for Chrome修复更新PageRank">Flag for Chrome修复更新PageRank &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2013/02/hacker-news-full-content-rss/">Hacker News的全文输出RSS地址</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/09/the-selected-questions-are-not-available-in-the-database/">选择的试题在数据库上不可用的解决方案</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/07/hello-world/">hello world</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/02/flag-for-chrome-repairepagerank/">Flag for Chrome修复更新PageRank</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/11/tcexam-transform-csv-to-xml/">tcexam在线考试系统csv文件转换为xml文件</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/Glowin">@Glowin</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'Glowin',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("glow1n", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/glow1n" class="twitter-follow-button" data-show-count="false">Follow @glow1n</a>
+  
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/117778352719386861792?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Glowin -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'glowin';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://Glowin.github.com/2011/11/tcexam-transform-csv-to-xml/';
+        var disqus_url = 'http://Glowin.github.com/2011/11/tcexam-transform-csv-to-xml/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

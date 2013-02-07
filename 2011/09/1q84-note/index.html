@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>给博客添加humans.txt - Glow Blog</title>
+  <meta name="author" content="Glowin">
+
+  
+  <meta name="description" content="一、什么是humans.txt humans.txt 就是记录这个网站相关制作人员和一些有贡献的作者的文本文档，告诉搜索引擎我们是人开发，而不是通过程序自动生成的网站，通常放在网站的根目录。humans.txt 是相对于 robots.txt 而言的，它不像robots.txt &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://Glowin.github.com/2011/09/1q84-note/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Glow Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Glow Blog</a></h1>
+  
+    <h2>This is glow blog.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:Glowin.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">给博客添加humans.txt</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-23T18:21:00+08:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><a href="http://glowface.net/2011/09/add-humans-txt/"><img class="alignnone size-full wp-image-142110" title="humanstxt" src="/static/images/2011/09/humanstxt.jpg" alt="" width="550" height="220" /></a></p>
+
+<h1>一、什么是humans.txt</h1>
+
+
+<p>humans.txt 就是记录这个网站相关制作人员和一些有贡献的作者的文本文档，告诉搜索引擎我们是人开发，而不是通过程序自动生成的网站，通常放在网站的根目录。humans.txt 是相对于 robots.txt 而言的，它不像robots.txt 中的针对搜索引擎的语句那么生硬，网站所有者可以在这个txt文档中加入网站简介和copyright显得更加人性化。</p>
+
+<h1>二、其他网站的使用</h1>
+
+
+<p>humans.txt的<a href="http://humanstxt.org/" target="_blank">官方网站</a>对humantxt给出了很好的定义和应用，大家可以猛击<a href="http://humanstxt.org/humans.txt" target="_blank">这里</a>查看官网对于humans.txt的使用。Google也在它的网站添加了humans.txt，想必google的搜索蜘蛛以后会把humans.txt作为一部分参考。google的humans如下：</p>
+
+<blockquote>Google is built by a large team of engineers, designers, researchers, robots, and others in many different sites across the globe. It is updated continuously, and built with more tools and technologies than we can shake a stick at. If you&#8217;d like to help us out, see google.com/jobs.</blockquote>
+
+
+<h1>三、如何添加humans.txt</h1>
+
+
+<p>说了那么多，现在给大家介绍一下如何在网站上添加humans.txt。</p>
+
+<p><strong>首先</strong>，新建一个txt文本文档，格式最好改为UTF-8（我用的是notepad++，“格式→转为UTF-8无BOM编码”），编辑完此txt文档后，命名此文件为humans.txt，上传到网站的根目录。</p>
+
+<p><strong>第二步</strong>，在header.php的&lt;head&gt;&lt;/head&gt;标签中插入如下的HTML代码:</p>
+
+<div class="source" style="font-family: Consolas, 'Lucida Console', 'Courier New'; color: #000000; background-color: #f9f7ed;"><span style="color: #1e90ff; font-weight: bold;">&lt;link</span> <span style="color: #1e90ff;">type=</span><span style="color: #aa5500;">&#8220;text/plain&#8221;</span> <span style="color: #1e90ff;">rel=</span><span style="color: #aa5500;">&#8220;author&#8221;</span> <span style="color: #1e90ff;">href=</span><span style="color: #aa5500;">&#8220;http://yourdomain.com/humans.txt&#8221;</span> <span style="color: #1e90ff; font-weight: bold;">/&gt;</span></div>
+
+
+<p>OK，大功告成，刷新一下网页，humans.txt添加成功。</p>
+
+<p><a href="/static/images/2011/09/humanstxt1.png"><img class="alignnone size-full wp-image-142118" title="humanstxt1" src="/static/images/2011/09/humanstxt1.png" alt="" width="316" height="122" /></a></p>
+
+<p>&nbsp;</p>
+
+<h1>三、最后要说的话</h1>
+
+
+<p>humans.txt相对于robots.txt来说还是一个很新的概念，但是不排除它受到一些开源组织和Google的推崇，最终成为一个标准。我们可以想象一下如果humans.txt 最终成为标准的话，会有如下影响：</p>
+
+<ol>
+    <li>该文件将被搜索引擎用来当做判断一个网站的信任程度的一个因素。</li>
+    <li>html代码head部分将会进一步简化，类似于CSS的调用，可以将一些author, copyright等等元素统统放在这个文件里进行调用，缩减代码体积。</li>
+    <li>主流浏览器会推出相应的插件或者内置功能用来解释Humans.txt，让访客第一时间了解该网站“关于我们”的信息，更加方便用户对网站有一个基本的了解。现在firefox已经有这样的插件了（猛击<a href="https://addons.mozilla.org/zh-CN/firefox/addon/humanstxt/" target="_blank">真相</a>）。</li>
+</ol>
+
+
+<p>相关链接如下：</p>
+
+<p>张鑫旭：<a href="http://www.zhangxinxu.com/wordpress/2011/01/humans-txt-%E7%BD%91%E7%AB%99%E7%9B%B8%E5%85%B3%E4%BA%BA%E5%91%98%E4%BF%A1%E6%81%AF%E8%AE%B0%E5%BD%95%E7%9A%84idea/" target="_blank">humans.txt-网站相关人员信息记录的idea</a></p>
+
+<p><a href="http://humanstxt.org/" target="_blank">humans.txt官方网站</a>(英文)</p>
+
+<p>谷奥：<a href="Google 不仅有 robots.txt，还有 humans.txt" target="_blank">Google 不仅有 robots.txt，还有 humans.txt</a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Glowin</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-23T18:21:00+08:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2011</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://Glowin.github.com/2011/09/1q84-note/" data-via="glow1n" data-counturl="http://Glowin.github.com/2011/09/1q84-note/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2011/09/notepad-delete-blank-lines/" title="Previous Post: 《1Q84》阅读笔记">&laquo; 《1Q84》阅读笔记</a>
+      
+      
+        <a class="basic-alignment right" href="/2011/10/notepad-rectangles/" title="Next Post: notepad++小技巧之列编辑">notepad++小技巧之列编辑 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2013/02/hacker-news-full-content-rss/">Hacker News的全文输出RSS地址</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/09/the-selected-questions-are-not-available-in-the-database/">选择的试题在数据库上不可用的解决方案</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/07/hello-world/">hello world</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/02/flag-for-chrome-repairepagerank/">Flag for Chrome修复更新PageRank</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/11/tcexam-transform-csv-to-xml/">tcexam在线考试系统csv文件转换为xml文件</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/Glowin">@Glowin</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'Glowin',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("glow1n", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/glow1n" class="twitter-follow-button" data-show-count="false">Follow @glow1n</a>
+  
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/117778352719386861792?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Glowin -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'glowin';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://Glowin.github.com/2011/09/1q84-note/';
+        var disqus_url = 'http://Glowin.github.com/2011/09/1q84-note/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

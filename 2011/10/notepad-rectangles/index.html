@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>notepad++小技巧之列编辑 - Glow Blog</title>
+  <meta name="author" content="Glowin">
+
+  
+  <meta name="description" content="怎样让敲代码从一个脑力劳动变成乐趣是任何一款编辑器的终极目标，在这里我不得不提到notepad++这款神器。我从使用它到现在已经有一年有余了，并且已经代替dreamweaver成为我在windows系统上的首选编辑器（为什么要用notepad++而不是dreamweaver？知乎上的相关讨论链接 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://Glowin.github.com/2011/10/notepad-rectangles/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Glow Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Glow Blog</a></h1>
+  
+    <h2>This is glow blog.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:Glowin.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Notepad++小技巧之列编辑</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-10-26T21:57:00+08:00" pubdate data-updated="true">Oct 26<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>怎样让敲代码从一个脑力劳动变成乐趣是任何一款编辑器的终极目标，在这里我不得不提到notepad++这款神器。我从使用它到现在已经有一年有余了，并且已经代替dreamweaver成为我在windows系统上的首选编辑器（为什么要用notepad++而不是dreamweaver？知乎上的相关<a href="http://www.zhihu.com/question/19885458?nr=1&amp;noti_id=8316845#428229" target="_blank">讨论链接</a>）。今天向大家介绍notepad++上的一个使用小技巧——列编辑。</p>
+
+<p>在编写javascript的时候，我们经常要把某个代码块注释或者进行批量编辑时，要是一行一行的给行首添加//注释的话，应该是一件很闹心的事。但是在notepad++上用两个快捷键就可以很好的解决这个问题，提高编程效率。</p>
+
+<p>步骤：</p>
+
+<p>1.在notepad++中，先指定到要批量添加注释的地方，使用 Shift+Alt 快捷键不放，用鼠标点击要处理的代码后点击，notepad++会高亮选中的代码块。</p>
+
+<p><a href="/static/images/2011/10/notepad++.jpg"><img class="alignnone size-full wp-image-142143" title="notepad++" src="/static/images/2011/10/notepad++.jpg" alt="" width="682" height="377" /></a></p>
+
+<p>2.快捷键选中代码块后，在你要批量添加的地方点击，然后快捷键 Alt + C，弹出编辑框如下图，在插入文本的输入框中添加你想输入的任何字符，这里我输入的是注释的//，点击回车，notepad++就自动在你想添加的内容。</p>
+
+<p><a href="/static/images/2011/10/notepad++2.jpg"><img class="alignnone size-full wp-image-142144" title="notepad++2" src="/static/images/2011/10/notepad++2.jpg" alt="" width="475" height="421" /></a></p>
+
+<p><strong><span style="color: #ff0000;">买一送一：</span></strong></p>
+
+<p>在 <strong>vim</strong>中相关的操作为“块操作”，相关步骤如下：</p>
+
+<ol>
+    <li>在normal模式中，输入“ ^ ”到达行首，快捷键 ctrl + O 开始块操作。</li>
+    <li>快捷键 ctrl + d 向下移动，你也可以使用hjkl来移动光标，或是使用%，或是别的。</li>
+    <li>输入“I” （大写的 i），在插入模式中输入&#8221;//&#8221;，按Esc键。I是插入，插入“//”，按ESC键来为每一行生效。</li>
+</ol>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Glowin</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-10-26T21:57:00+08:00" pubdate data-updated="true">Oct 26<span>th</span>, 2011</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://Glowin.github.com/2011/10/notepad-rectangles/" data-via="glow1n" data-counturl="http://Glowin.github.com/2011/10/notepad-rectangles/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2011/09/1q84-note/" title="Previous Post: 给博客添加humans.txt">&laquo; 给博客添加humans.txt</a>
+      
+      
+        <a class="basic-alignment right" href="/2011/11/rucinaxian/" title="Next Post: 2012哥伦比亚大学中国新年晚会留学生群口相声《如此纳贤》台词整理">2012哥伦比亚大学中国新年晚会留学生群口相声《如此纳贤》台词整理 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2013/02/hacker-news-full-content-rss/">Hacker News的全文输出RSS地址</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/09/the-selected-questions-are-not-available-in-the-database/">选择的试题在数据库上不可用的解决方案</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/07/hello-world/">hello world</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/02/flag-for-chrome-repairepagerank/">Flag for Chrome修复更新PageRank</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/11/tcexam-transform-csv-to-xml/">tcexam在线考试系统csv文件转换为xml文件</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/Glowin">@Glowin</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'Glowin',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("glow1n", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/glow1n" class="twitter-follow-button" data-show-count="false">Follow @glow1n</a>
+  
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/117778352719386861792?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Glowin -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'glowin';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://Glowin.github.com/2011/10/notepad-rectangles/';
+        var disqus_url = 'http://Glowin.github.com/2011/10/notepad-rectangles/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
