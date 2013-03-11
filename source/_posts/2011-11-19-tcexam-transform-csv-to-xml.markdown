@@ -17,45 +17,47 @@ TCExam 考试系统默认只能导入xml格式的考试试题，但是我们老�
 
 103,车工是使用车床进行切削的工种。,3,,11,,,1,,,,是,,,,
 104,车工是使用车床的技术工人。,3,,11,,,1,,,,是,,,,</pre>
+
 csv格式的文件主要是用逗号来分隔文件内容的格式。
 
 TCExam格式的xml文件如下
-<div class="source" style="font-family: Consolas, 'Lucida Console', 'Courier New'; color: #000000; background-color: #f9f7ed;"><span style="color: #008080;">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;tcexamquestions</span> <span style="color: #ff0000;">version=</span><span style="color: #0000ff;">"11.2.004"</span><span style="color: #000080; font-weight: bold;">&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;header</span> <span style="color: #ff0000;">lang=</span><span style="color: #0000ff;">"cn"</span> <span style="color: #ff0000;">date=</span><span style="color: #0000ff;">"2011-11-18 08:49:14"</span><span style="color: #000080; font-weight: bold;">&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;/header&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;body&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;module&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;name&gt;</span>车工机考试题<span style="color: #000080; font-weight: bold;">&lt;/name&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;enabled&gt;</span>true<span style="color: #000080; font-weight: bold;">&lt;/enabled&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;subject&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;name&gt;</span>单选题<span style="color: #000080; font-weight: bold;">&lt;/name&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;description&gt;</span>单选题<span style="color: #000080; font-weight: bold;">&lt;/description&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;enabled&gt;</span>true<span style="color: #000080; font-weight: bold;">&lt;/enabled&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;question&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;enabled&gt;</span>true<span style="color: #000080; font-weight: bold;">&lt;/enabled&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;type&gt;</span>single<span style="color: #000080; font-weight: bold;">&lt;/type&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;difficulty&gt;</span>1<span style="color: #000080; font-weight: bold;">&lt;/difficulty&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;position&gt;&lt;/position&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;timer&gt;</span>0<span style="color: #000080; font-weight: bold;">&lt;/timer&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;fullscreen&gt;</span>false<span style="color: #000080; font-weight: bold;">&lt;/fullscreen&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;inline_answers&gt;</span>false<span style="color: #000080; font-weight: bold;">&lt;/inline_answers&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;auto_next&gt;</span>false<span style="color: #000080; font-weight: bold;">&lt;/auto_next&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;description&gt;</span>车床的种类很多，其中应用最广的是(  )。<span style="color: #000080; font-weight: bold;">&lt;/description&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;explanation&gt;&lt;/explanation&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;answer&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;enabled&gt;</span>true<span style="color: #000080; font-weight: bold;">&lt;/enabled&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;isright&gt;</span>false<span style="color: #000080; font-weight: bold;">&lt;/isright&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;position&gt;&lt;/position&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;keyboard_key&gt;&lt;/keyboard_key&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;description&gt;</span>立式车床<span style="color: #000080; font-weight: bold;">&lt;/description&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;explanation&gt;&lt;/explanation&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;/answer&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;/question&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;/subject&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;/module&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;/body&gt;</span>
-<span style="color: #000080; font-weight: bold;">&lt;/tcexamquestions&gt;</span></div>
+``` xml
+<?xml version=”1.0” encoding=”UTF-8” ?>
+<tcexamquestions version=“11.2.004”>
+	<header lang=“cn” date=“2011-11-18 08:49:14”></header>
+	<body>
+		<module>
+			<name>车工机考试题</name>
+			<enabled>true</enabled>
+			<subject>
+				<name>单选题</name>
+				<description>单选题</description>
+				<enabled>true</enabled>
+				<question>
+				<enabled>true</enabled>
+				<type>single</type>
+				<difficulty>1</difficulty>
+				<position></position>
+				<timer>0</timer>
+				<fullscreen>false</fullscreen>
+				<inline_answers>false</inline_answers>
+				<auto_next>false</auto_next>
+				<description>车床的种类很多，其中应用最广的是(  )。</description>
+				<explanation></explanation>
+				<answer>
+					<enabled>true</enabled>
+					<isright>false</isright>
+					<position></position>
+					<keyboard_key></keyboard_key>
+					<description>立式车床</description>
+					<explanation></explanation>
+				</answer>
+				</question>
+		</subject>
+	</module>
+	</body>
+</tcexamquestions>
+```
 在分析 csv 和 TCExam考试系统的代码后，转换的 php 代码的思路也越来越明晰。首先我们先读取 csv 文件，然后逐行读取它，使用 php 的 explode 函数，将每行文字用英文逗号分隔，输出为数组方便后面的调用。最后输出 TCExam 标准的 xml 文件提供下载。
 <h1> 如何给 TCExam 添加 csv 转换成 xml 的功能</h1>
 1、在 admin/code/tce_import_xml_questions.php 文件的 97 行左右添加如下的代码，主要是给考试系统添加上传 csv 格式的文件，以及添加考试试题的名称。（复制代码时请把下面中出现的中文引号全部改为英文引号，否则就会报语法错误；另外把tce_import_xml_question.php的编码改成UTF-8无BOM编码）
