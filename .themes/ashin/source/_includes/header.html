@@ -1,0 +1,47 @@
+
+<div id="pre-header">
+  <!-- begin #socialIcons -->
+  <div id="social-icons">
+    <ul id="social-links">
+      <li class="facebook-link"><a href="<?php echo of_get_option('sc_facebook') ?>" class="facebook" id="social-01" title="<?php _e( 'Join Us on Facebook!', 'site5framework' ); ?>">Facebook</a></li>
+      <li class="twitter-link"><a href="<?php echo of_get_option('sc_twitter') ?>" class="twitter" id="social-02" title="<?php _e( 'Follow Us on Twitter', 'site5framework' ); ?>">Twitter</a></li>
+      <li class="google-link"><a href="<?php echo of_get_option('sc_googleplus') ?>" id="social-03" title="<?php _e( 'Google+', 'site5framework' ); ?>" class="google">Google</a></li>
+      <li class="dribbble-link"><a href="<?php echo of_get_option('sc_dribble') ?>" id="social-04" title="<?php _e( 'Dribble', 'site5framework' ); ?>" class="dribbble">Dribble</a></li>
+      <li class="vimeo-link"><a href="<?php echo of_get_option('sc_vimeo') ?>" id="social-05" title="<?php _e( 'Vimeo', 'site5framework' ); ?>" class="vimeo">Vimeo</a></li>
+      <li class="skype-link"><a href="<?php echo of_get_option('sc_skype') ?>" id="social-06" title="<?php _e( 'Skype', 'site5framework' ); ?>" class="skype">Skype</a></li>
+      <li class="linkedin-link"><a href="<?php echo of_get_option('sc_linkedin') ?>" id="social-07" title="<?php _e( ' LinkedIn', 'site5framework' ); ?>" class="linkedin">Linkedin</a></li>
+      <li class="pinterest-link"><a href="<?php echo of_get_option('sc_pinterest') ?>" id="social-09" title="<?php _e( 'Pinterest', 'site5framework' ); ?>" class="pinterest">Pinterest</a></li>
+      <li class="rss-link"><a href="<?php echo of_get_option('sc_extrss') ?  of_get_option('sc_extrss') : bloginfo('rss_url'); ?>" id="social-08" title="<?php _e( 'RSS', 'site5framework' ); ?>" class="rss">RSS Feeds</a></li>
+    </ul>
+  </div>
+  <!-- end #socialIcons -->
+</div>
+<!-- end #pre-header -->
+
+<header role="banner" id="header" class="clearfix">
+    
+    <!-- begin #logo -->
+    <?php if ( !of_get_option('sc_clogo')== '') { ?>
+    <hgroup id="logo-wrapper">
+      <h1><a id="logo" href="{{ root_url }}/" rel="home">{{ site.title }}</a></h1>
+        {% if site.subtitle %}<h5>{{ site.subtitle }}</h5>{% endif %}
+    </hgroup>
+    <!-- end #logo -->
+  
+    <!-- begin #topMenu -->
+    <div id="navigation-wrapper" class="clearfix">
+      <nav id="main-navigation" class="main-menu">
+        <ul class="sf-menu">
+          <li>
+            <a href="{ root_url }}">首页</a>
+            <a href="{ root_url }}">生活感言</a>
+            <a href="{ root_url }}">WEB前端</a>
+            <a href="{ root_url }}">关于</a>
+            <a href="{ root_url }}">留言板</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- end #topMenu -->
+
+</header> <!-- end header -->
