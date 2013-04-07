@@ -1,29 +1,37 @@
 ---
 layout: default
 ---
+<!-- page header -->
+<div class="container clearfix">
+  <img class="intro-img" src="{{ root_url }}/library/images/inner-page-bg.jpg" />
+</div>
 
-<div class="blog-index">
-  {% assign index = true %}
-  {% for post in paginator.posts %}
-  {% assign content = post.content %}
+<div class="three-fourth">
+
+  <div id="main" role="main">
+
+    {% assign index = true %}
+    {% for post in paginator.posts %}
+    {% assign content = post.content %}
     <article>
       {% include article.html %}
     </article>
-  {% endfor %}
-  <div class="pagination">
-    {% if paginator.next_page %}
-      <a class="prev" href="{{paginator.next_page}}">&larr; Older</a>
-    {% endif %}
-    <a href="/blog/archives">Blog Archives</a>
-    {% if paginator.previous_page %}
-    <a class="next" href="{{paginator.previous_page}}">Newer &rarr;</a>
-    {% endif %}
-  </div>
+    {% endfor %}
+    
+    <!-- begin #pagination -->
+    <div id="pagination">
+      {% if paginator.previous_page %}<a href="/blog/archive/2013/2/page/1">Previous Page</a>{% endif %}
+      {% if paginator.next_page %}<a href="/blog/archive/2013/2/page/3">Next Page</a>{% endif %}
+    </div>
+    <!-- end #pagination -->        
+
+  </div> <!-- end #main -->
+</div><!-- three-fourth -->
+
+<div class="one-fourth last">
+{% if site.blog_index_asides.size %}
+  {% include_array blog_index_asides %}
+{% else %}
+  {% include_array default_asides %}
+{% endif %}
 </div>
-<aside class="sidebar">
-  {% if site.blog_index_asides.size %}
-    {% include_array blog_index_asides %}
-  {% else %}
-    {% include_array default_asides %}
-  {% endif %}
-</aside>
