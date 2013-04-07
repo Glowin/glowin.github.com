@@ -450,8 +450,16 @@ width:240px;
 height:200px;
 }
 #logo-wrapper h1 {
-   margin-bottom: 0;
+margin-bottom: 0;
+margin-top: 0;
 }
+
+#logo-wrapper h2 {
+font-size: 14px;
+line-height: 16px;
+margin-top: 10px;
+}
+
 #tagline {
    margin:0;
    white-space: nowrap;
