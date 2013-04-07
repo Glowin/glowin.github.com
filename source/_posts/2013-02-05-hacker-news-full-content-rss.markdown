@@ -3,7 +3,7 @@ layout: post
 title: "Hacker News的全文输出RSS地址"
 date: 2013-02-05 23:12
 comments: true
-categories: 
+categories: "WEB前端"
 ---
 [Hacker News](http://news.ycombinator.com/) 是一家关于计算机黑客和创业公司的社会化新闻网站，由 Paul Graham 的创业孵化器 Y Combinator 创建。与其它社会化新闻网站不同的是 Hacker News 没有踩或反对一条提交新闻的选项（不过评论还是可以被有足够 Karma 的用户投反对票，或是投支持票）；只可以赞或是完全不投票。简而言之，Hacker News 允许提交任何可以被理解为“任何满足人们求知欲”的新闻。这段话来自[维基百科][hacker news]。
 
