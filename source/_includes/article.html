@@ -1,18 +1,32 @@
+{% capture date %}{{ page.date }}{{ post.date }}{% endcapture %}
+{% capture date_formatted %}{{ page.date_formatted }}{{ post.date_formatted }}{% endcapture %}
+{% capture has_date %}{{ date | size }}{% endcapture %}
+
+{% capture updated %}{{ page.updated }}{{ post.updated }}{% endcapture %}
+{% capture updated_formatted %}{{ page.updated_formatted }}{{ post.updated_formatted }}{% endcapture %}
+{% capture was_updated %}{{ updated | size }}{% endcapture %}
+<div class="entry-meta">
+  <time class="post-date" datetime="{{ date | datetime | date_to_xmlschema }}">
+    <span class="post-month">{{ date | datetime | date: "%m" | replace:'01','一月' | replace:'02','二月' | replace:'03','三月' | replace:'04','四月' | replace:'05','五月' | replace:'06','六月' | replace:'07','七月' | replace:'08','八月' | replace:'09','九月' | replace:'10','十月' | replace:'11','十一月' | replace:'12','十二月'  }}</span>
+    <strong class="post-day">{{ date | datetime | date: "%d" }}</strong>
+    <span class="post-year ">{{ date | datetime | date: "%Y" }}年</span>
+  </time>
+  <ul>
+    {% capture category %}{% if post %}{{ post.categories | category_links | size }}{% else %}{{ page.categories | category_links | size }}{% endif %}{% endcapture %}
+    <li>
+      {% if post %}{{ post.categories | category_links }}{% else %}{{ page.categories | category_links }}{% endif %}
+    </li>
+  </ul>
+</div>
+
 {% unless page.no_header %}
+<div class="entry-body">
   <header>
     {% if index %}
-      <h1 class="entry-title"><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
+      <h1 class="entry-title permalink"><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
     {% else %}
-      <h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
+      <h1 class="entry-title permalink">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
     {% endif %}
-    {% unless page.meta == false %}
-      <p class="meta">
-        {% include post/date.html %}{{ time }}
-        {% if site.disqus_short_name and page.comments != false and post.comments != false and site.disqus_show_comment_count == true %}
-         | <a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread">Comments</a>
-        {% endif %}
-      </p>
-    {% endunless %}
   </header>
 {% endunless %}
 {% if index %}
@@ -20,9 +34,12 @@
   {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
   {% if excerpted == 'true' %}
     <footer>
-      <a rel="full-article" href="{{ root_url }}{{ post.url }}">{{ site.excerpt_link }}</a>
+      <p class="readmore">
+        <a rel="full-article" href="{{ root_url }}{{ post.url }}">{{ site.excerpt_link }}</a>
+      </p>
     </footer>
   {% endif %}
 {% else %}
-<div class="entry-content">{{ content }}</div>
+  <div class="entry-content">{{ content }}</div>
+</div>
 {% endif %}

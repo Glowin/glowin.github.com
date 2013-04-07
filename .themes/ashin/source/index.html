@@ -13,7 +13,7 @@ layout: default
     {% assign index = true %}
     {% for post in paginator.posts %}
     {% assign content = post.content %}
-    <article>
+    <article style="post type-post status-publish format-standard hentry clearfix">
       {% include article.html %}
     </article>
     {% endfor %}
