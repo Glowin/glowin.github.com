@@ -1,10 +1,8 @@
-<section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    {% for post in site.posts limit: site.recent_posts %}
+<div class="widget-1 first sidebarBox widget-container widget_recent_entries" id="recent-posts-4">
+  <h4 class="widget-title">近期文章</h4>
+  <ul>{% for post in site.posts limit: site.recent_posts %}
       <li class="post">
         <a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
+      </li>{% endfor %}
   </ul>
-</section>
+</div>
