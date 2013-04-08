@@ -3,7 +3,7 @@ layout: post
 title: "tcexam在线考试系统csv文件转换为xml文件"
 date: 2011-11-19 21:09
 comments: true
-categories: 
+categories: tech
 ---
 <span class="Apple-style-span" style="color: #333333; font-weight: 300;">tcexam是一个非常优秀的在线考试系统，将纸笔考试转化为在计算机上在线完成，只要有计算机和网络就可以考试，大大简化了整个考试流程，将出题、考试、管理阅卷登常规过程一并纳入一个系统中，不仅减少了人力，而且极大的提高了整个效率和考试结果的可信度。Glow认为最大的收益方为组织考试的老师，它让老师免去了试卷排版和编排的工作，将更多的时间放在了出题的质量上，而且只需要提交 csv 格式或者 xml 格式的考试试题设置相关考试要求，其他的工作比如判卷就可以交与服务器完成，特别是当题目大多数为选择题时效果最明显。（TCExam的主页和下载页面为</span><a style="font-weight: 300;" href="http://www.tcexam.org/" target="_blank">这个</a><span class="Apple-style-span" style="color: #333333; font-weight: 300;">）</span>
 <h1> 为什么要把 csv 转换成 xml</h1>

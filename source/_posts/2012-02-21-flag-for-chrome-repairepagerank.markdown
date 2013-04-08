@@ -3,7 +3,7 @@ layout: post
 title: "Flag for Chrome修复更新PageRank"
 date: 2012-02-21 16:31
 comments: true
-categories: 
+categories: tech
 ---
 Flag for Chrome 是一款 chrome 上的插件，它能显示被访问网站服务器所在国家和地区、Geo、Google PageRank,、Alexa Rank和WOT等信息。功能和 firefox 上的 flagfox 还要强大。我就经常用它来看网站的所在国家和 PageRank。<a href="https://chrome.google.com/webstore/detail/dbpojpfdiliekbbiplijcphappgcgjfn" target="_blank">插件下载地址</a>
 

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "dance again"
+title: "豆瓣音乐收听过千了"
 date: 2010-09-23 12:23
 comments: true
-categories: 
+categories: mylife
 ---
 <div id="scid:0767317B-992E-4b12-91E0-4F059A8CECA8:3e358f0d-eb9e-4314-ac9c-2527fcecc7fb" class="wlWriterEditableSmartContent" style="margin: 0px; display: inline; float: none; padding: 0px;">Technorati 标签: <a rel="tag" href="http://technorati.com/tags/%e8%b1%86%e7%93%a3%e9%9f%b3%e4%b9%90">豆瓣音乐</a>,<a rel="tag" href="http://technorati.com/tags/%e6%94%b6%e5%90%ac">收听</a></div>
 不知不觉中，我在豆瓣音乐的收听已经到了1000+了，发博文庆祝下。撒花~

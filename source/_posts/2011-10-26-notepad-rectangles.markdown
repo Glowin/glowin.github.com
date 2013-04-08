@@ -3,7 +3,7 @@ layout: post
 title: "notepad++小技巧之列编辑"
 date: 2011-10-26 21:57
 comments: true
-categories: 
+categories: tech
 ---
 怎样让敲代码从一个脑力劳动变成乐趣是任何一款编辑器的终极目标，在这里我不得不提到notepad++这款神器。我从使用它到现在已经有一年有余了，并且已经代替dreamweaver成为我在windows系统上的首选编辑器（为什么要用notepad++而不是dreamweaver？知乎上的相关<a href="http://www.zhihu.com/question/19885458?nr=1&amp;noti_id=8316845#428229" target="_blank">讨论链接</a>）。今天向大家介绍notepad++上的一个使用小技巧——列编辑。
 

@@ -3,7 +3,7 @@ layout: post
 title: "解决Picasa不能读取GIF和PNG图片的问题"
 date: 2010-08-29 08:29
 comments: true
-categories: 
+categories: tech
 ---
 Google 的免费图片管理工具Picasa，数秒钟内就可找到并欣赏计算机上的图片。但是Picasa的默认安装是不支持GIF和PNG格式的图片。难道我们就不能在Picasa中打开GIF和PNG格式的图片了吗？能，只要我们在Picasa中进行相关设置就可以了。
 

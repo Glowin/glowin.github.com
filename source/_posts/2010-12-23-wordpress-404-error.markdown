@@ -3,7 +3,7 @@ layout: post
 title: "WordPress设置固定链接后，发生404错误解决办法"
 date: 2010-12-23 19:56
 comments: true
-categories: 
+categories: tech
 ---
 前几天在<a href="http://linfcstmr.net/" target="_blank">小红</a>童鞋的帮助下，顺利的把博客搬到他维护的服务器上面。转移数据库、安装插件好一阵忙活，然后在浏览器上输入域名，顺利打开了主页。正当我为搬家成功沾沾自喜的时候，意外发生了——点开主页上任何一个链接都是提示404错误，而且还不是我主题自定义的404页面。
 

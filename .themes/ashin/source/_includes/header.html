@@ -31,11 +31,12 @@
       <nav id="main-navigation" class="main-menu">
         <ul class="sf-menu">
           <li>
-            <a href="{ root_url }}">首页</a>
-            <a href="{ root_url }}">生活感言</a>
-            <a href="{ root_url }}">WEB前端</a>
-            <a href="{ root_url }}">关于</a>
-            <a href="{ root_url }}">留言板</a>
+            <a href="{{ root_url }}">首页</a>
+            <a href="{{ root_url }}/{{ site.category_dir }}/front-end">WEB前端</a>
+            <a href="{{ root_url }}/{{ site.category_dir }}/sparks">创意火花</a>
+            <a href="{{ root_url }}/{{ site.category_dir }}/tech">奇淫技巧</a>
+            <a href="{{ root_url }}/{{ site.category_dir }}/mylife">生活感言</a>
+            <a href="{{ root_url }}/about/">关于博主</a>
           </li>
         </ul>
       </nav>

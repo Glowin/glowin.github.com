@@ -3,7 +3,7 @@ layout: post
 title: "生命不息，学习不止……"
 date: 2010-12-08 13:54
 comments: true
-categories: 
+categories: mylife
 ---
 前几天<a href="http://linfcstmr.net/blog/index.php" target="_blank">小红</a>在我博客<a href="http://glowface.net/massage-board#comment-51" target="_blank">留言</a>提醒我说我有好长一段时间米更新了。嗯，想想这几天确实把博客更新这件事搁到一边了。不是因为时间的原因，而是这段时间确实没有什么好的学习心得啊神马的给各位看官分享。加之最近一直不是很开心，只有在人人和<a href="http://twitter.com/#!/glow_chiang" target="_blank">twitter</a>上吐槽了。
 

@@ -3,7 +3,7 @@ layout: post
 title: "如何做小抄？"
 date: 2010-06-30 12:07
 comments: true
-categories: 
+categories: others
 ---
 <p>1，不要被考前教育蒙到，要是被吓吓你就不抄了，那不好意思，我写的东西你看了也没用，转身走人吧。</p>
 <p>2，做小抄虽然要小，但题不能少，如果你是个又懒有怕麻烦的人，那你也转身走人吧</p>

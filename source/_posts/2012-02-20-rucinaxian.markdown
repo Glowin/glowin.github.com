@@ -3,7 +3,7 @@ layout: post
 title: "2012哥伦比亚大学中国新年晚会留学生群口相声《如此纳贤》台词整理"
 date: 2011-11-19 21:09
 comments: true
-categories: 
+categories: others
 ---
 演员表：王浩（甲）、彭元涛（阎王爷）、桑子阳（马面）、Ervin（卡扎菲）
 
