@@ -3,7 +3,7 @@ layout: post
 title: "notepad++解决多余空行"
 date: 2011-08-25 9:43
 comments: true
-categories: tech
+categories: sparks
 ---
 Notepad++ 是一款免费的开源的跨平台的代码编辑器。它支持包括中文在内的多国语言，功能强大，除了可以用来制作一般的纯文字说明文件，也十分适合当作撰写电脑程序的编辑器。Notepad++不仅可以实现语法高亮显示，也有语法折叠功能，并且支持宏以及扩充基本功能的外挂模组。
 

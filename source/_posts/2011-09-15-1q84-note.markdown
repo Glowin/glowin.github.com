@@ -3,7 +3,7 @@ layout: post
 title: "给博客添加humans.txt"
 date: 2011-09-23 18:21
 comments: true
-categories: tech
+categories: sparks
 ---
 <a href="http://glowface.net/2011/09/add-humans-txt/"><img class="alignnone size-full wp-image-142110" title="humanstxt" src="/static/images/2011/09/humanstxt.jpg" alt="" width="550" height="220" /></a>
 <h1>一、什么是humans.txt</h1>
