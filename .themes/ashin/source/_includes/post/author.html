@@ -5,4 +5,14 @@
 {% else %}
   {% assign author = site.author %}
 {% endif %}
-{% if author %}<span class="byline author vcard">Posted by <span class="fn">{{ author }}</span></span>{% endif %}
+{% if author %}
+<div class="author clearfix">
+  <div class="author-gravatar">
+    <img alt="" src="{{ root_url }}/images/avatar.jpg" class="avatar avatar-64 photo" height="64" width="64">
+  </div>
+  <div class="author-about">
+  <h4><a href="https://github.com/Glowin">{{ author }}</a></h4>
+  <p class="author-description"></p>
+  </div>
+</div>
+{% endif %}

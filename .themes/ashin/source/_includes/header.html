@@ -19,7 +19,6 @@
 <header role="banner" id="header" class="clearfix">
     
     <!-- begin #logo -->
-    <?php if ( !of_get_option('sc_clogo')== '') { ?>
     <hgroup id="logo-wrapper">
       <h1><a id="logo" href="{{ root_url }}/" rel="home">{{ site.title }}</a></h1>
         {% if site.subtitle %}<h2>{{ site.subtitle }}</h2>{% endif %}
@@ -30,13 +29,11 @@
     <div id="navigation-wrapper" class="clearfix">
       <nav id="main-navigation" class="main-menu">
         <ul class="sf-menu">
-          <li>
-            <a href="{{ root_url }}/{{ site.category_dir }}/front-end">WEB前端</a>
-            <a href="{{ root_url }}/{{ site.category_dir }}/sparks">创意火花</a>
-            <a href="{{ root_url }}/{{ site.category_dir }}/tech">奇淫技巧</a>
-            <a href="{{ root_url }}/{{ site.category_dir }}/mylife">生活感言</a>
-            <a href="{{ root_url }}/about/">关于博主</a>
-          </li>
+            <li><a href="{{ root_url }}/{{ site.category_dir }}/front-end">WEB前端</a></li>
+            <li><a href="{{ root_url }}/{{ site.category_dir }}/sparks">创意火花</a></li>
+            <li><a href="{{ root_url }}/{{ site.category_dir }}/tech">奇淫技巧</a></li>
+            <li><a href="{{ root_url }}/{{ site.category_dir }}/mylife">生活感言</a></li>
+            <li><a href="{{ root_url }}/about/">关于博主</a></li>
         </ul>
       </nav>
     </div>
