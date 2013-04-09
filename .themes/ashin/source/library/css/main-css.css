@@ -1821,14 +1821,13 @@ ul#portfolio-items-one-third li  img{ width:100%;height:auto;padding:0;margin:0;
 /* ---------------------------------------------------------------------- */
 /* 17- BLOG LAYOUT
 /* ---------------------------------------------------------------------- */
-
 #content h1 {
    margin-bottom: 30px;
 }
+.post article {
+  padding-left: 145px;
+}
 .hentry  {
-   margin: 0 0 0px 0;
-   padding: 0;
-  
    padding: 0 0 30px 0;
    margin:0 0 30px 0;
 }
@@ -1868,6 +1867,7 @@ ul#portfolio-items-one-third li  img{ width:100%;height:auto;padding:0;margin:0;
    width: 125px;
    font-size: 12px;
    line-height: 20px;
+   clear: left;
 }
  .entry-meta ul {   margin: 0 }
  .entry-meta li {

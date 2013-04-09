@@ -3,15 +3,19 @@ layout: page
 footer: false
 ---
 
-<div id="blog-archives" class="category">
 {% for post in site.categories[page.category] %}
 {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
 {% unless year == this_year %}
   {% assign year = this_year %}
-  <h2>{{ year }}</h2>
-{% endunless %}
-<article>
-  {% include archive_post.html %}
-</article>
-{% endfor %}
+<div class="entry-meta">
+  <time class="post-date" datetime="{{ year }}">
+    <span class="post-month">公元</span>
+    <strong class="post-day">{{ year }}</strong>
+    <span class="post-year ">年</span>
+  </time>
 </div>
+{% endunless %}
+  <article>
+    {% include archive_post.html %}
+  </article>
+{% endfor %}
