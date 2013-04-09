@@ -14,7 +14,7 @@
   <ul>
     {% capture category %}{% if post %}{{ post.categories | category_links | size }}{% else %}{{ page.categories | category_links | size }}{% endif %}{% endcapture %}
     <li>
-      {% if post %}{{ post.categories | category_links }}{% else %}{{ page.categories | category_links }}{% endif %}
+      {% if post %}{{ post.categories | category_links | replace:'front-end', 'WEB前端' | replace:'sparks','创意火花' | replace:'tech','奇淫技巧' | replace:'mylife','生活感言' | replace:'others','其他' }}{% else %}{{ page.categories | category_links | replace:'front-end', 'WEB前端' | replace:'sparks','创意火花' | replace:'tech','奇淫技巧' | replace:'mylife','生活感言' | replace:'others','其他'  }}{% endif %}
     </li>
   </ul>
 </div>
