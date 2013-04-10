@@ -108,7 +108,8 @@ a h1:hover,a h2:hover,a h3:hover,a h4:hover,a h5:hover,a h6:hover{color:#9dcedf;
 .text-align-left {text-align:left;}
 .text-align-right {text-align:right;}
 .img-align-left {margin:0px 10px 10px 0;float:left;}
-
+.left { float: left;}
+.right { float: right;}
 /* ---------------------------------------------------------------------- */
 /* 03- 	PRE HEADER CONTENT 
 /* ---------------------------------------------------------------------- */
@@ -436,7 +437,7 @@ ul#social-links {
 	width:100%;
 }
 #navigation-wrapper{float:right;}
-#content {padding-bottom: 30px; font-size: 14px;}
+#content { font-size: 14px;}
 #logo{
 	float: none;
 	/*height: 55px;
