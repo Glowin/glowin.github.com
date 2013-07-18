@@ -1,3 +1,5 @@
+//全局文件，将所有需要合并压缩的文件路径放在此文件中
+
 @import "compass";
 @include global-reset;
 @include reset-html5;

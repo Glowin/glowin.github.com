@@ -85,10 +85,6 @@ table { border-collapse: collapse; border-spacing: 0; }
 .clearfix:before, .clearfix:after, nav[role=navigation] .menu ul:before, nav[role=navigation] .menu ul:after { content: ""; display: table; }
 .clearfix:after, nav[role=navigation] .menu ul:after { clear: both; }
 .clearfix, nav[role=navigation] .menu ul { zoom: 1; }
-
-/* wordpress junk */
-.wp-smiley { margin: 0 !important; max-height: 1em; }
-
 				
 /******************************************************************
 PRINT STYLESHEET

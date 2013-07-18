@@ -14,7 +14,7 @@
   <ul>
     {% capture category %}{% if post %}{{ post.categories | category_links | size }}{% else %}{{ page.categories | category_links | size }}{% endif %}{% endcapture %}
     <li>
-      {% if post %}{{ post.categories | category_links | replace:'front-end', 'WEB前端' | replace:'sparks','创意火花' | replace:'tech','奇淫技巧' | replace:'mylife','生活感言' | replace:'others','其他' }}{% else %}{{ page.categories | category_links | replace:'front-end', 'WEB前端' | replace:'sparks','创意火花' | replace:'tech','奇淫技巧' | replace:'mylife','生活感言' | replace:'others','其他'  }}{% endif %}
+      {% if post %}{{ post.categories | category_links | replace:'front-end</a>', 'WEB前端</a>' | replace:'sparks</a>','创意火花</a>' | replace:'tech</a>','奇淫技巧</a>' | replace:'mylife</a>','生活感言</a>' | replace:'others</a>','其他</a>' }}{% else %}{{ page.categories | category_links | replace:'front-end', 'WEB前端' | replace:'sparks','创意火花' | replace:'tech','奇淫技巧' | replace:'mylife','生活感言' | replace:'others','其他'  }}{% endif %}
     </li>
   </ul>
 </div>
