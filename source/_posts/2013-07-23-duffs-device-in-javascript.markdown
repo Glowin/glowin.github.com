@@ -7,6 +7,10 @@ categories:
 ---
 
 ```js
+/**
+ * Duff's Device 
+ * http://home.earthlink.net/~kendrasg/info/js_opt/jsOptMain.html#duffsdevice
+ */
 var iterations = 9999;
 var testVal = 0;
 var n = iterations / 8;
@@ -35,3 +39,34 @@ do {
 }
 while( --n > 0);
 ```
+
+另外的一个 Jeff 的版本
+
+```js
+/**
+ * Fast Duff's Device
+ * @author Jeff Greenberg
+ * http://home.earthlink.net/~kendrasg/info/js_opt/jsOptMain.html#fastDuffsdevice
+ */
+var testVal = 0;
+var n = iterations % 8;
+while (n--) {
+ testVal++;
+}
+
+n = parseInt(iterations / 8);
+while (n--) {
+ testVal++;
+ testVal++;
+ testVal++;
+ testVal++;
+ testVal++;
+ testVal++;
+ testVal++;
+ testVal++;
+}
+```
+
+这儿有一些相关的链接:
+http://jsperf.com/duffs-device
+
