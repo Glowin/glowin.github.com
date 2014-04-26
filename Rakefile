@@ -4,9 +4,9 @@ require "stringex"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
-ssh_user       = "Glow@o.stdyun.net"
+ssh_user       = "glow@v.glowface.net"
 ssh_port       = "22"
-document_root  = "~/glowface.net/"
+document_root  = "~/www/glowface.net/"
 rsync_delete   = false
 rsync_args     = ""  # Any extra arguments to pass to rsync
 deploy_default = "rsync"
